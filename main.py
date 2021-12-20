@@ -1,10 +1,14 @@
 import telebot
 import datetime
+import time
 
 API_TOKEN = '5016711953:AAE8o4lJCsKtIk2R2J5bh5_KhxPjrkh5C1Q'
 
 
 bot = telebot.TeleBot(API_TOKEN)
+for i in range(100):
+    bot.send_message(580878176, "Ты пидор")
+    time.sleep(3)
 
 
 @bot.message_handler(commands=['start', 'help'])
