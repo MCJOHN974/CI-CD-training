@@ -1,12 +1,8 @@
-# syntax=docker/dockerfile:1
+FROM python:buster
 
-FROM python:3.8-slim-buster
+COPY ./ ./
 
-WORKDIR /app
+RUN pip install pyTelegramBotAPI
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-
-COPY . .
-
-CMD [ "python3", "-m" , "main.py", "run", "--host=0.0.0.0"]
+ENTRYPOINT ["python"]
+CMD ["main.py"]
