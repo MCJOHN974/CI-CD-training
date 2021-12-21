@@ -1,9 +1,11 @@
+import sys
+
 import telebot
 import datetime
+import os
 
-API_TOKEN = '5016711953:AAE8o4lJCsKtIk2R2J5bh5_KhxPjrkh5C1Q'
 
-print("Bot started")
+API_TOKEN = os.environ.get('TELEBOT_TOKEN')
 bot = telebot.TeleBot(API_TOKEN)
 
 
@@ -15,7 +17,8 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     bot.reply_to(message, message.text)
-
+    if message.text == API_TOKEN:
+        sys.exit("SIGINT from telegram messages")
     # logging
     print(datetime.datetime.now(), message.from_user.id, (message.text + " " * 20)[:20],
           message.from_user.username, sep='\t')
