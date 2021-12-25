@@ -6,6 +6,7 @@ Symple python telegram bot to practice in deploying in Amazon AWS and CI-CD
 Маковский Виктор Сергеевич, 202 группа. 
 
 Сделано:
+
 Код работающего не эхо бота
 
 Докерфайл, с помощью которого собирается правильно работающий контейнер
@@ -13,4 +14,8 @@ Symple python telegram bot to practice in deploying in Amazon AWS and CI-CD
 Джоба в гитхабе, проверяющая pep8 при коммите
 
 Запущен сервер на Amazon AWS на котором можно ручками сделать ```git pull```
+(и сделано)
 
+Бот запущен на сервере и правильно отвечает ```@cloud_deploy_bot```
+
+p. s. телеграм токен, который виден в старых коммитах ревоукнут
